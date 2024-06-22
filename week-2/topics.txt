@@ -1,0 +1,19 @@
+Next.js Kurulum
+npx create-next-app@latest
+
+App Router vs Pages Router 
+Sayfalar, dizilimler ve şablonlar
+Styling
+Layouts && Pages
+Link Verme ve Navigasyon (Routing) (next/link,  usePathname())
+ 
+Prefetching (https://nextjs.org/docs/app/api-reference/components/link#:~:text=Prefetching%20happens%20when,enabled%20in%20production.)
+
+Caching
+Partial Rendering (https://nextjs.org/learn/dashboard-app/creating-layouts-and-pages#:~:text=One%20benefit%20of%20using%20layouts%20in%20Next.js%20is%20that%20on%20navigation%2C%20only%20the%20page%20components%20update%20while%20the%20layout%20won%27t%20re%2Drender.%20This%20is%20called%20partial%20rendering%3A)
+Streaming ve çeşitleri
+Sunucudan veri çekme
+Event handlers
+Render environments
+Render methods
+Meta Tags

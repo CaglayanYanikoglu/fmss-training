@@ -1,0 +1,35 @@
+● DOM, DOM Manipülasyonu
+
+pnpm create vite fetch-app --template react
+● React Giriş
+● SPA
+● Component
+● What is JSX?
+● Using variables in JSX 
+● Props 
+● State
+● Parent Element
+● Hooks
+● Lifecycles
+● Router
+● Hoc
+● Portal
+● Lazy Load, Code Split
+● CSR, SSR, SSG
+
+Next.js nedir, neden kullanılır?
+SEO ve önemi
+
+React vs Next.js
+
+  /* Hooks:
+  useState
+  useEffect
+  useMemo, useCallback,
+  useRef,
+  useReducer,
+  useContext, */
+
+
+npx create-next-app@latest
+

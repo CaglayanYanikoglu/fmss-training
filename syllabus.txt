@@ -1,0 +1,48 @@
+*1.Hafta*
+
+React Temeller
+React nasıl çalışır
+Components nedir, neden kullanılır?
+Component Lifecycles
+Data Fetch ve Server istekleri nasıl yapılır
+Routing ve Dynamic Routes
+Hook’lar
+CSR, SSR
+
+Next.js nedir, neden kullanılır?
+SEO ve önemi
+
+React vs Next.js
+
+*2.Hafta*
+Kurulum
+Routing
+
+App Router ile Pages Router farkları
+Rotaları oluşturma
+Sayfalar, dizilimler ve şablonlar
+Link Verme ve Navigasyon
+Prefetching 
+Caching
+Partial Rendering
+Streaming ve çeşitleri
+Sunucudan veri çekme
+Event handlers
+Render environments
+Render methods
+Meta Tags
+
+*3..Hafta*
+Styles
+Loading, Error Handling
+Pages Router vs App Router
+File-based Routing
+React Server components
+Optimizing images in Next.js
+React Server Components vs Client Components
+
+Pages Router:
+Dynamic Routes ve Navigating
+General Layout
+
+Next.js Optimization
