@@ -12,9 +12,8 @@ Partial Rendering (https://nextjs.org/learn/dashboard-app/creating-layouts-and-p
 Sunucudan veri çekme
 Meta Tags
 
-
-Caching
 Streaming ve çeşitleri
+Caching
 Event handlers
 Render environments
 Render methods

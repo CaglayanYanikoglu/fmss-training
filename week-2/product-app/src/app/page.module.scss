@@ -1,0 +1,28 @@
+.main {
+  img {
+    position: static !important;
+  }
+}
+
+.header {
+  svg {
+    transform: scale(3);
+  }
+  padding: 16px 24px;
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.headerMenu {
+  display: flex;
+  gap: 12px;
+  a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 600;
+    &:hover {
+      border-bottom: 2px solid #000;
+    }
+  }
+}

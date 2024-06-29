@@ -1,0 +1,14 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.product {
+  max-width: 140px;
+  a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 400;
+  }
+}
