@@ -1,33 +1,41 @@
-import Link from "next/link";
-
-const fetchData = async () => {
-  try {
-    await new Promise(r => setTimeout(r, 500));
-  
-    // const res = await fetch('https://jsonplacehol2der.typicode.com/todos');
-    const res = await fetch('https://jsonplaceholder.typicode.com/todos');
-  
-    const resData = await res.json();
-    return resData;
-    
-  } catch (error) {
-    console.log('error');
+import TodoTable from "@/components/todos/todoTable";
+import UserDetail from "@/components/user/userDetail";
+import styles from "./todos.module.css";
+import { Suspense } from "react";
+function parsePageFromSearchParams(searchParams) {
+  if (!searchParams["page"]) {
+    return 1;
   }
-};
+  const parsedPage = parseInt(searchParams["page"]);
+  return isNaN(parsedPage) ? 1 : Math.max(parsedPage, 1); // to return only positive numbers
+}
 
-export default async function Todos() {
-  const data = await fetchData();
+function parseSizeFromSearchParams(searchParams) {
+  if (!searchParams["size"]) {
+    return 10;
+  }
+  const parsedSize = parseInt(searchParams["size"]);
+  return isNaN(parsedSize) ? 10 : Math.max(parsedSize, 10); // to return only positive numbers and min size (10)
+}
+function parseUserIdFromSearchParams(searchParams) {
+  if (!searchParams["user_id"]) {
+    return undefined;
+  }
+  const parsedUserId = parseInt(searchParams["user_id"]);
+  return isNaN(parsedUserId) ? undefined : parsedUserId;
+}
+export default function Todos({ searchParams }) {
+  const page = parsePageFromSearchParams(searchParams);
+  const size = parseSizeFromSearchParams(searchParams);
+  const userId = parseUserIdFromSearchParams(searchParams);
   return (
-    <div>
-      <p>Todos</p>
-      {data.map(todo => (
-        <div key={todo.id}>
-          <Link href={`todos/${todo.id.toString()}`}>{todo.title}</Link>
-          {/* <a href={todo.id}>{todo.title}</a> */}
-          <p>{todo.completed}</p>
-        </div>
-      ))}
-
+    <div className={styles.todosGrid}>
+      <Suspense fallback={<p>Loading...</p>}>
+        <TodoTable page={page} size={size} userId={userId} />
+      </Suspense>
+      <Suspense fallback={<p>Loading...</p>}>
+        <UserDetail userId={userId} />
+      </Suspense>
     </div>
-  )
+  );
 }

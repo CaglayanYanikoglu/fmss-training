@@ -1,0 +1,7 @@
+.todosGrid{
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 70% 30%;
+    gap: 8px;
+    margin: auto;
+}
